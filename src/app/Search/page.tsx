@@ -15,8 +15,9 @@ const Search = () => {
 
         >
             <Configure hitsPerPage={3} />
-            <div>
+            
                 <SearchBox className={'!rounded'} />
+<div className='w-1/2 max-md:w-full'>
                 <Hits hitComponent={Hit} />
             </div>
         </InstantSearch>
