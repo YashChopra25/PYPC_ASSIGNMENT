@@ -9,7 +9,7 @@ import Search from '../Search/page';
 export default function MapComponent() {
     return (
         <div className='w-screen h-screen relative'>
-            <div className='absolute z-10 top-6 left-4 w-1/4'>
+            <div className='absolute z-10 top-6 left-4 w-1/2 max-md:w-full'>
                 <Search />
             </div>
             <Map
