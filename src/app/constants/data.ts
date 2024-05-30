@@ -1,4 +1,5 @@
-export const  dataToView=[
+
+export const dataToView=[
     {
       "id": 1,
       "photo": "https://robohash.org/nihilsapienteomnis.png?size=64x64&set=set1",
