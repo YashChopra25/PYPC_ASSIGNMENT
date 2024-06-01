@@ -2,7 +2,7 @@ import React from "react";
 import { useMapContext } from "../../Context/useMapContext";
 import { dataToView } from "../../constants/data";
 import MarkLocation from "./MarkLocation";
-const MarkerComponent = React.memo(() => {
+const MarkerComponent = () => {
     const props = useMapContext()
     if (!props) {
         return <></>
@@ -19,5 +19,5 @@ const MarkerComponent = React.memo(() => {
             }
         </>
     )
-})
+}
 export default MarkerComponent
