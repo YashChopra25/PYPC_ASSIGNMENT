@@ -1,7 +1,8 @@
-import { useMapContext } from "../Context/useMapContext";
-import { dataToView } from "../constants/data";
+import React from "react";
+import { useMapContext } from "../../Context/useMapContext";
+import { dataToView } from "../../constants/data";
 import MarkLocation from "./MarkLocation";
-const MarkerComponent = () => {
+const MarkerComponent = React.memo(() => {
     const props = useMapContext()
     if (!props) {
         return <></>
@@ -18,5 +19,5 @@ const MarkerComponent = () => {
             }
         </>
     )
-}
+})
 export default MarkerComponent

@@ -5,7 +5,7 @@ import {
     UseSearchBoxProps
 } from 'react-instantsearch';
 import { Hit } from './Hit';
-import { useMapContext } from '../Context/useMapContext';
+import { useMapContext } from '../../Context/useMapContext';
 
 function CustomSearchBox(props: UseSearchBoxProps) {
     const { query, refine } = useSearchBox(props);
@@ -56,10 +56,11 @@ function CustomSearchBox(props: UseSearchBoxProps) {
                     event.stopPropagation();
 
                     setQuery('');
-                    if (Props) {
-                        const { setMapViewUserData } = Props
-                        setMapViewUserData([])
-                    }
+                    // to clear the result stored in context marker on clicking the reset button of search box 
+                    // if (Props) {
+                    //     const { setMapViewUserData } = Props
+                    //     setMapViewUserData([])
+                    // }
 
                     if (inputRef.current) {
                         inputRef.current.focus();
@@ -92,7 +93,7 @@ function CustomSearchBox(props: UseSearchBoxProps) {
                 </div>
             </form >
             {
-                RemoveInitailPrintOfHit && <div className='mt-3 ml-5 w-1/2 max-md:w-full overflow-y-scroll rounded-lg max-h-80 cursor-pointer'>
+                RemoveInitailPrintOfHit && <div className='mt-3 ml-5 w-1/2 max-md:w-full overflow-y-scroll rounded-lg max-h-64 cursor-pointer'>
                     {
                         hits.length > 0 && hits.map((Hitdata, index) => (
                             <Hit hit={Hitdata} key={index} />
